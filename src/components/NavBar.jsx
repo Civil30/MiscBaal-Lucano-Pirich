@@ -1,6 +1,8 @@
-import React from 'react';
-import { Container, Wrapper, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Elements'
+import React, { useEffect } from 'react';
+import { Container, Wrapper, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Styled'
+import { CartIcon } from './CartWidget-Styled';
 import { RiStarSmileFill, RiStarSmileLine } from "react-icons/ri";
+import { FiShoppingCart } from "react-icons/fi";
 
 
 const NavBar = () =>  {
@@ -15,24 +17,27 @@ const NavBar = () =>  {
                 </LogoContainer>
                 <Menu>
                     <MenuItems>
-                        <MenuItemsLinks>
+                        <MenuItemsLinks href='#'>
                             Inicio
                         </MenuItemsLinks>
                     </MenuItems>
                     <MenuItems>
-                        <MenuItemsLinks>
+                        <MenuItemsLinks href='#'>
                             Servicios
                         </MenuItemsLinks>
                     </MenuItems>
                     <MenuItems>
-                        <MenuItemsLinks>
+                        <MenuItemsLinks href='#'>
                             Nosotros
                         </MenuItemsLinks>
                     </MenuItems>
+                    <CartIcon>
+                        <FiShoppingCart />
+                    </CartIcon>
                 </Menu>
             </Wrapper>
         </Container>
     )
 }
 
-export default NavBar
+export default NavBar 

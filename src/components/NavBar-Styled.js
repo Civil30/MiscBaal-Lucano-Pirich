@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div `
     width: 100%;
     background-color: #222831;
-    height: 5rem;    
+    height: 6rem;    
 `;
 
 export const Wrapper = styled.div `
@@ -57,4 +57,5 @@ export const MenuItems = styled.li `
 
 export const MenuItemsLinks = styled.a `
     color: #EEEEEE;
+    text-decoration: none;
 `;
