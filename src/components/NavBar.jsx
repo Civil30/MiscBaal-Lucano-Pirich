@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import { Container, Wrapper, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Styled'
 import { CartIcon } from './CartWidget-Styled';
-import { RiStarSmileFill, RiStarSmileLine } from "react-icons/ri";
+import { RiStarSmileLine } from "react-icons/ri";
 import { FiShoppingCart } from "react-icons/fi";
 
 
@@ -12,7 +12,6 @@ const NavBar = () =>  {
             <Wrapper>
                 <LogoContainer>
                     <RiStarSmileLine />
-                    {/* <RiStarSmileFill /> */}
                     <p>Misc<span>Baal</span></p>
                 </LogoContainer>
                 <Menu>
