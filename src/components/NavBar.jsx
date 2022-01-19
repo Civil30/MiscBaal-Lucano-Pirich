@@ -2,10 +2,9 @@
 import { Container, Wrapper, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Styled'
 import CartWidget from './CartWidget';
 import { RiStarSmileLine } from "react-icons/ri";
-// import { FiShoppingCart } from "react-icons/fi";
 
 
-const NavBar = () =>  {
+export default function NavBar () {
     
     return (
         <Container>
@@ -36,5 +35,3 @@ const NavBar = () =>  {
         </Container>
     )
 }
-
-export default NavBar 
