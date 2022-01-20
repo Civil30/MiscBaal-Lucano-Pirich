@@ -18,7 +18,7 @@ export default function ItemCount ({ stock, initial, onAdd }) {
     }
 
     function addCart (e) {
-        if (stock === 0) return ;
+        if (stock === 0 || qty === 0) return ;
         console.log("Agregado al carrito")
     }
 
