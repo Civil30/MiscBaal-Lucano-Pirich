@@ -4,7 +4,7 @@ const ItemListContainer = () => {
     return (
         <>
             <h1>Título provisional</h1>
-            <ItemCount stock={7} initial={0} />
+            <ItemCount stock={5} initial={0} />
         </>
     )
 };

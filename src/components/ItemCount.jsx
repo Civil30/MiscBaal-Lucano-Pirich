@@ -16,7 +16,12 @@ export default function ItemCount ({ stock, initial, onAdd }) {
             setQty(qty - 1)
         }
     }
-    
+
+    function addCart (e) {
+        if (stock === 0) return ;
+        console.log("Agregado al carrito")
+    }
+
     return (
         <ItemCountContainer>
             <ItemInfo>
@@ -25,11 +30,11 @@ export default function ItemCount ({ stock, initial, onAdd }) {
             </ItemInfo>
             <QtyAndCartContainer>
                 <QtyControlsContainer>
-                    <QtyControlsBtn onClick={increaseQty}>+</QtyControlsBtn>
-                    <Qty>{qty}</Qty>
                     <QtyControlsBtn onClick={decreaseQty}>-</QtyControlsBtn>
+                    <Qty>{qty}</Qty>
+                    <QtyControlsBtn onClick={increaseQty}>+</QtyControlsBtn>
                 </QtyControlsContainer>
-                <AddCartBtn onClick={onAdd} >Agregar al carrito</AddCartBtn>
+                <AddCartBtn onClick={addCart}>Agregar al carrito</AddCartBtn>
             </QtyAndCartContainer>
         </ItemCountContainer>
     )
