@@ -1,10 +1,12 @@
-import ItemCount from "./ItemCount";
-
+import ItemCount from './ItemCount';
+import ItemList from './ItemList'
 const ItemListContainer = () => {
     return (
         <>
-            <h1>Título provisional</h1>
-            <ItemCount stock={5} initial={0} />
+            <div>
+                <ItemList />
+            </div>
+            {/* <ItemCount stock={5} initial={0} /> */}
         </>
     )
 };
