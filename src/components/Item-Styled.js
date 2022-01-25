@@ -7,10 +7,12 @@ import styled from "styled-components"
 // }
 
 export const Card = styled.a`
-    max-width: 60rem;
-    border: 1px solid #FCBAD3;
-    padding: 2rem;
-    margin-top: 2rem;
+    display: block;
+
+    width: 25rem;
+    border: 1px solid rgba(256, 186, 211, 0.4);
+    padding: 0rem;
+    margin: 2rem auto;
     text-decoration: none;
     color: #393E46;
     border-radius: 5px;
@@ -32,7 +34,9 @@ export const Id = styled.span`
 
 export const Img = styled.img`
     transition: transform 0.3s ease;
-    background-color: none;
+    width: 100%;
+    object-fit: none;
+    height: auto;    
 `
 
 export const Title = styled.h3`

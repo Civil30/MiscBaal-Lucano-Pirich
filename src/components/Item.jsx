@@ -1,5 +1,4 @@
 import { Card, Img, Title, Id } from "./Item-Styled"
-import ItemCount from "./ItemCount"
 
 export default function Item ({ item }) {
     const { id, title, price, pictureUrl } = item

@@ -3,6 +3,9 @@ import Item from "./Item";
 import squirtle_thumb from "../assets/img/squirtle/squirtle_thumb.jpg"
 import bulbasaur_thumb from "../assets/img/bulbasaur/bulbasaur_thumb.jpg"
 import charmander_thumb from "../assets/img/charmander/charmander_thumb.jpg"
+import eevee_thumb from "../assets/img/eevee/eevee_thumb.jpg"
+import wooloo_thumb from "../assets/img/wooloo/wooloo_thumb.jpg"
+import froakie_thumb from "../assets/img/froakie/froakie_thumb.jpg"
 import { WrapperCards } from "./ItemList-Styled";
 
 const products = [
@@ -23,6 +26,24 @@ const products = [
         title: "Charmander peluche",
         price: 3000,
         pictureUrl: charmander_thumb
+    },
+    {
+        id: 4,
+        title: "Eevee peluche",
+        price: 3000,
+        pictureUrl: eevee_thumb
+    },
+    {
+        id: 5,
+        title: "Wooloo peluche",
+        price: 3000,
+        pictureUrl: wooloo_thumb
+    },
+    {
+        id: 6,
+        title: "Froakie peluche",
+        price: 3000,
+        pictureUrl: froakie_thumb
     }
 ]
 
