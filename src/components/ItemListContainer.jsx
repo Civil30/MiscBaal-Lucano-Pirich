@@ -1,14 +1,10 @@
 // import ItemCount from './ItemCount';
 import ItemList from './ItemList'
-const ItemListContainer = () => {
+export default function ItemListContainer () {
     return (
-        <>
-            <div>
-                <ItemList />
-            </div>
-            {/* <ItemCount stock={5} initial={0} /> */}
-        </>
+        <div>
+            <ItemList />
+        </div>
+        /* <ItemCount stock={5} initial={0} /> */
     )
 };
-
-export default ItemListContainer;

@@ -13,37 +13,43 @@ const products = [
         id: 1,
         title: "Bulbasaur peluche",
         price: 3000,
-        pictureUrl: bulbasaur_thumb 
+        pictureUrl: bulbasaur_thumb, 
+        detail: ""
     },
     {
         id: 2,
         title: "Squirtle peluche",
         price: 3000,
-        pictureUrl: squirtle_thumb
+        pictureUrl: squirtle_thumb,
+        detail: ""
     },
     {
         id: 3,
         title: "Charmander peluche",
         price: 3000,
-        pictureUrl: charmander_thumb
+        pictureUrl: charmander_thumb,
+        detail: ""
     },
     {
         id: 4,
         title: "Eevee peluche",
         price: 3000,
-        pictureUrl: eevee_thumb
+        pictureUrl: eevee_thumb,
+        detail: ""
     },
     {
         id: 5,
         title: "Wooloo peluche",
         price: 3000,
-        pictureUrl: wooloo_thumb
+        pictureUrl: wooloo_thumb,
+        detail: ""
     },
     {
         id: 6,
         title: "Froakie peluche",
         price: 3000,
-        pictureUrl: froakie_thumb
+        pictureUrl: froakie_thumb,
+        detail: ""
     }
 ]
 

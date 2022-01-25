@@ -3,10 +3,10 @@ import { ItemCountContainer, ItemInfo, ItemName, ItemStock, Qty, QtyControlsBtn,
 
 export default function ItemCount ({ stock, initial, onAdd }) {
     
-    const [qty, setQty] = useState(initial)
+    const [qty, setQty] = useState (initial)
 
     function increaseQty () {
-        if (qty < stock){
+        if (qty < stock) {
             setQty(qty + 1)
         }
     }
@@ -25,16 +25,16 @@ export default function ItemCount ({ stock, initial, onAdd }) {
     return (
         <ItemCountContainer>
             <ItemInfo>
-                <ItemName>Producto de ejemplo</ItemName>
-                <ItemStock>Disponibles: {stock}</ItemStock>
+                <ItemName> Producto de ejemplo </ItemName>
+                <ItemStock> Disponibles: {stock} </ItemStock>
             </ItemInfo>
             <QtyAndCartContainer>
                 <QtyControlsContainer>
-                    <QtyControlsBtn onClick={decreaseQty}>-</QtyControlsBtn>
-                    <Qty>{qty}</Qty>
-                    <QtyControlsBtn onClick={increaseQty}>+</QtyControlsBtn>
+                    <QtyControlsBtn onClick={decreaseQty}> - </QtyControlsBtn>
+                    <Qty> {qty} </Qty>
+                    <QtyControlsBtn onClick={increaseQty}> + </QtyControlsBtn>
                 </QtyControlsContainer>
-                <AddCartBtn onClick={addCart}>Agregar al carrito</AddCartBtn>
+                <AddCartBtn onClick={addCart}> Agregar al carrito </AddCartBtn>
             </QtyAndCartContainer>
         </ItemCountContainer>
     )
