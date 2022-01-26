@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ItemCountContainer, ItemInfo, ItemName, ItemStock, Qty, QtyControlsBtn, QtyControlsContainer, QtyAndCartContainer, AddCartBtn } from "./ItemCount-Styled"
+import { ItemCountContainer, ItemStock, Qty, QtyControlsBtn, QtyControlsContainer, QtyAndCartContainer, AddCartBtn } from "./ItemCount-Styled"
 
 export default function ItemCount ({ stock, initial, onAdd }) {
     
