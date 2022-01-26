@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 export const ItemCountContainer = styled.div`
     margin: 0 auto;
-    border: 1px solid #333;
-    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.1);
     border-radius: 5px;
-    max-width: 25rem;
-    height: 30rem;
+    width: 100%;
     padding: 1rem;
     font-size: 14px;
     display: flex;
@@ -38,17 +35,28 @@ export const QtyControlsContainer = styled.div`
     align-items: center;
     border: 1px solid #393E46;
     border-radius: 5px;
-    max-height: 3rem;
-    font-size: px;
+    width: 100%;
+    max-height: 4rem;
+    font-size: 25px;
 `
 export const QtyControlsBtn = styled.button`
     border: none;
+    width: 35px;
+    height: 35px;
     margin: 0 1rem;
     color: #00ADB5;
     cursor: pointer;
-    background-color: transparent;
-    /* font-weight: bold; */
-    font-size: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    :hover {
+        background-color: #6A2C70;
+        color: white; 
+    }
 `
 
 export const Qty = styled.p`

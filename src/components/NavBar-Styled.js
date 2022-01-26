@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div `
     width: 100%;
@@ -6,22 +7,23 @@ export const Container = styled.div `
     height: 6rem;    
 `;
 
-export const Wrapper = styled.div `
-    width: 100%;
-    max-width: 100rem;
+export const Wrapper = styled.nav `
+    width: 90%;
+    max-width: 120rem;
     display: flex;
     justify-content: space-between;
     height: 100%;
-    // border: 1px solid #333;
     margin: auto;
+    // border: 1px solid #333;
 `;
 
-export const LogoContainer = styled.div `
+export const LogoContainer = styled(Link) `
     font-size: 2rem;
     color: #eee;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-decoration: none;
 
     svg {
         font-size: 4rem;
@@ -55,7 +57,7 @@ export const MenuItems = styled.li `
     font-size: 16px;
 `;
 
-export const MenuItemsLinks = styled.a `
+export const MenuItemsLinks = styled(Link) `
     color: #EEEEEE;
     text-decoration: none;
 `;

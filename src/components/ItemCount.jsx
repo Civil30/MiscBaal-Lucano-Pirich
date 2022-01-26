@@ -24,10 +24,10 @@ export default function ItemCount ({ stock, initial, onAdd }) {
 
     return (
         <ItemCountContainer>
-            <ItemInfo>
-                <ItemName> Producto de ejemplo </ItemName>
+            
+                
                 <ItemStock> Disponibles: {stock} </ItemStock>
-            </ItemInfo>
+            
             <QtyAndCartContainer>
                 <QtyControlsContainer>
                     <QtyControlsBtn onClick={decreaseQty}> - </QtyControlsBtn>

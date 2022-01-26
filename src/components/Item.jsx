@@ -1,14 +1,15 @@
-import { Card, Img, Title, Id } from "./Item-Styled"
+import { Card, Img, Title, Id, Price } from "./Item-Styled"
 
 export default function Item ({ item }) {
+
     const { id, title, price, pictureUrl } = item
 
     return(
-        <Card href="#">
-            <Img src={pictureUrl}/>
+        <Card to={`/detail/${id}`}>
+            <Img src={pictureUrl} />
             <Title>{title}</Title>
             <Id>ID: {id}</Id>
-            <h1>$ {price}</h1>
+            <Price>$ {price}</Price>
         </Card>
     )
 }

@@ -2,6 +2,7 @@
 import { Container, Wrapper, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Styled'
 import CartWidget from './CartWidget';
 import { RiStarSmileLine } from "react-icons/ri";
+// import { Link } from 'react-router-dom';
 
 
 export default function NavBar () {
@@ -9,23 +10,23 @@ export default function NavBar () {
     return (
         <Container>
             <Wrapper>
-                <LogoContainer>
+                <LogoContainer to="/">
                     <RiStarSmileLine />
                     <p>Misc<span>Baal</span></p>
                 </LogoContainer>
                 <Menu>
                     <MenuItems>
-                        <MenuItemsLinks href='#'>
+                        <MenuItemsLinks to='/'>
                             Inicio
                         </MenuItemsLinks>
                     </MenuItems>
                     <MenuItems>
-                        <MenuItemsLinks href='#'>
-                            Servicios
+                        <MenuItemsLinks to='/products'>
+                            Productos
                         </MenuItemsLinks>
                     </MenuItems>
                     <MenuItems>
-                        <MenuItemsLinks href='#'>
+                        <MenuItemsLinks to='/about'>
                             Nosotros
                         </MenuItemsLinks>
                     </MenuItems>
