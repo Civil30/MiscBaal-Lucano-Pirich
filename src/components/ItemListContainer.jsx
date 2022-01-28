@@ -2,20 +2,27 @@
 import { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import { getProducts } from '../services/fetch'
+import SkeletonHome from './Skeletons/SkeletonHome'
 
 
 export default function ItemListContainer () {
     
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(false)
     
     useEffect(() => {
-        getProducts.then( res => setProducts(res) )
+        setLoading(true)
+        getProducts.then( res => {
+            setProducts(res)
+            setLoading(false)
+        })
     },[])
 
     return (
         <div>
-            <ItemList products={products}/>
+            {
+                !loading ? <ItemList products={products}/> : <SkeletonHome />
+            }
         </div>
-        /* <ItemCount stock={5} initial={0} /> */
     )
 };

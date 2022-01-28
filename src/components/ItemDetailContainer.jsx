@@ -5,9 +5,11 @@ import { products } from "../products/products";
 
 import { useParams } from "react-router-dom";
 import { Container } from "./ItemDetailContainer-Styled";
+import SkeletonDetails from "./Skeletons/SkeletonDetails";
 
 export default function ItemDetailContainer () {
     
+    const [loading, setLoading] = useState(false)
     const [item, setItem] = useState([])
     const { id } = useParams()
     
@@ -22,7 +24,9 @@ export default function ItemDetailContainer () {
 
     return (
         <Container>
-            <ItemDetail item={item} />
+            {
+                !loading ? <ItemDetail item={item} /> : <SkeletonDetails />
+            }
         </Container>
     )
 }
