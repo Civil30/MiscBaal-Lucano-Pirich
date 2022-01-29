@@ -1,4 +1,4 @@
-import { Card, Img } from "./SkeletonsElements";
+import { Card } from "./SkeletonsElements";
 
 export default function SkeletonHome () {
     return (

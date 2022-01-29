@@ -9,6 +9,5 @@ export const CartIcon = styled.div `
     svg {
         color: #EEE;
         font-size: 2.5rem;
-        margin-left: 4rem;
     }
 `
