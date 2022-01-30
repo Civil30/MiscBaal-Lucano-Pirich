@@ -9,13 +9,12 @@ import SkeletonDetails from "./Skeletons/SkeletonDetails";
 
 export default function ItemDetailContainer () {
     
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [item, setItem] = useState([])
     const { id } = useParams()
     
     useEffect(() => {
         const getItem = new Promise((resolve, reject) => { 
-            setLoading(true)
             setTimeout(() => {
                 resolve(products.find( item => {
                     setLoading(false)
@@ -29,7 +28,7 @@ export default function ItemDetailContainer () {
     return (
         <Container>
             {
-                !loading ? <ItemDetail item={item} /> : <SkeletonDetails />
+                loading ? <ItemDetail item={item} /> : <SkeletonDetails />
             }
         </Container>
     )

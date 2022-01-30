@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const WrapperCards = styled.section`
     display: grid;
+    position: relative;
+    overflow: hidden;
     margin: 3rem auto;
     max-width: 120rem;
     width: 90%;

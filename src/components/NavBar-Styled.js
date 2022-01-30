@@ -80,7 +80,12 @@ export const LogoContainer = styled(Link) `
 `;
 
 export const Menu = styled.ul `
-    display: none;
+    display: block;
+    position:absolute;
+    top: 6rem;
+    transition: all 1s ease;
+    transform: ${({mobile}) => !mobile ? "translate(200, 50%)" : ""};
+    background-color: #333;
     
     @media (min-width: 478px)  {
         display: flex;

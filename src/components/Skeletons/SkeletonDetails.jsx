@@ -1,5 +1,5 @@
-import { TitleWrapper } from "../ItemDetail-Styled";
-import { Count, DataContainer, GridContainer, Img, Price, Title } from "./SkeletonsElements";
+import Shimmer from "./Shimmer";
+import { Count, DataContainer, TitleWrapper, GridContainer, Img, Price, Title } from "./SkeletonsElements";
 
 export default function SkeletonDetails () {
     return(
@@ -12,6 +12,7 @@ export default function SkeletonDetails () {
                 </TitleWrapper>
                 <Count />
             </DataContainer>
+            <Shimmer />
         </GridContainer>
     )
 

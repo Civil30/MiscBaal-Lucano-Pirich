@@ -3,14 +3,21 @@ import { Container, Wrapper, MobileIcon, LogoContainer, Menu, MenuItems, MenuIte
 import CartWidget from './CartWidget';
 import { RiStarSmileLine } from "react-icons/ri";
 import { VscMenu } from "react-icons/vsc";
+import { useState } from 'react';
 
 
 export default function NavBar () {
-    
+    const [mobile, setMobile] = useState(false)
+
+    function showMenu () {
+        setMobile(!mobile)
+        console.log(mobile)
+    }
+
     return (
         <Container>
             <Wrapper>
-                <MobileIcon>
+                <MobileIcon onClick={showMenu}>
                     <VscMenu />
                 </MobileIcon>
                 <LogoContainer to="/">
@@ -18,7 +25,7 @@ export default function NavBar () {
                     <p>Misc</p>
                     <p>Baal</p>
                 </LogoContainer>
-                <Menu>
+                { mobile && (<Menu mobile={mobile}>
                     <MenuItems>
                         <MenuItemsLinks to='/'>
                             Inicio
@@ -34,8 +41,8 @@ export default function NavBar () {
                             Nosotros
                         </MenuItemsLinks>
                     </MenuItems>
-                </Menu>
-                    <CartWidget />
+                </Menu>)}
+                <CartWidget />
             </Wrapper>
         </Container>
     )
