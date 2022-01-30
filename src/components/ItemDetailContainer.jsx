@@ -28,7 +28,7 @@ export default function ItemDetailContainer () {
     return (
         <Container>
             {
-                loading ? <ItemDetail item={item} /> : <SkeletonDetails />
+                !loading ? <ItemDetail item={item} /> : <SkeletonDetails />
             }
         </Container>
     )

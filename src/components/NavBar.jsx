@@ -1,4 +1,3 @@
-// import React, { useEffect } from 'react';
 import { Container, Wrapper, MobileIcon, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Styled'
 import CartWidget from './CartWidget';
 import { RiStarSmileLine } from "react-icons/ri";
@@ -7,11 +6,10 @@ import { useState } from 'react';
 
 
 export default function NavBar () {
-    const [mobile, setMobile] = useState(false)
+    const [mobileMenu, setMobileMenu] = useState(false)
 
     function showMenu () {
-        setMobile(!mobile)
-        console.log(mobile)
+        setMobileMenu(!mobileMenu)
     }
 
     return (
@@ -25,7 +23,7 @@ export default function NavBar () {
                     <p>Misc</p>
                     <p>Baal</p>
                 </LogoContainer>
-                { mobile && (<Menu mobile={mobile}>
+                <Menu open={mobileMenu}>
                     <MenuItems>
                         <MenuItemsLinks to='/'>
                             Inicio
@@ -41,7 +39,7 @@ export default function NavBar () {
                             Nosotros
                         </MenuItemsLinks>
                     </MenuItems>
-                </Menu>)}
+                </Menu>
                 <CartWidget />
             </Wrapper>
         </Container>

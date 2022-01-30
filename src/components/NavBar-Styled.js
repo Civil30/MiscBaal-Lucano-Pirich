@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 export const Container = styled.div `
     width: 100%;
     background-color: #222831;
-    height: 6rem;    
+    height: 6rem;
+    /* padding-top: 1px;   */
 `;
 
 export const Wrapper = styled.nav `
@@ -28,11 +29,12 @@ export const LogoContainer = styled(Link) `
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
+    /* padding-top: 1px; */
 
     svg {
         font-size: 4rem;
         grid-column: 2 / 3;
-        margin-bottom: 10px ;
+        margin-bottom: 6px ;
     }
 
     p {
@@ -80,10 +82,24 @@ export const LogoContainer = styled(Link) `
 `;
 
 export const Menu = styled.ul `
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 6rem;
+    transition: left 0.2s ease;
+    left: ${({ open }) => open ? "0" : "-100%"};
+    background-color: rgba(34,40,49,0.9);
+    width: 100%;
+    z-index: 99;
+    margin: 0;
+    padding: 2rem;
+    height: 100%;
     
-    @media (min-width: 478px)  {
+    @media (min-width: 478px) {
+        position: unset;
         display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 2rem;
         padding: 1rem;
@@ -96,8 +112,11 @@ export const MenuItems = styled.li `
 `;
 
 export const MenuItemsLinks = styled(Link) `
+    display: block;
     color: #EEEEEE;
     text-decoration: none;
+    width: 100%;
+    padding: 2rem;
 `;
 
 export const MobileIcon = styled.div`
