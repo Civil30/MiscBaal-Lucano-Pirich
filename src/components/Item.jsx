@@ -5,7 +5,7 @@ export default function Item ({ item }) {
     const { id, title, price, pictureUrl } = item
 
     return(
-        <Card to={`/detail/${id}`}>
+        <Card to={`/item/${id}`}>
             <Img src={pictureUrl} />
             <Title>{title}</Title>
             <Id>ID: {id}</Id>

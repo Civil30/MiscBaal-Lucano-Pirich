@@ -30,8 +30,13 @@ export default function NavBar () {
                         </MenuItemsLinks>
                     </MenuItems>
                     <MenuItems>
-                        <MenuItemsLinks to='/products'>
-                            Productos
+                        <MenuItemsLinks to='/category/peluches'>
+                            Peluches
+                        </MenuItemsLinks>
+                    </MenuItems>
+                    <MenuItems>
+                        <MenuItemsLinks to='/category/figuras'>
+                            Figuras
                         </MenuItemsLinks>
                     </MenuItems>
                     <MenuItems>
