@@ -15,11 +15,11 @@ export default function ItemDetailContainer () {
     
     useEffect(() => {
         const getItem = new Promise((resolve, reject) => { 
+            resolve(products.find( item => {
+                return item.id.toString() === id
+            }))
             setTimeout(() => {
-                resolve(products.find( item => {
-                    setLoading(false)
-                    return item.id.toString() === id
-                }))
+                setLoading(false)
             }, 2000)
         })
         getItem.then(item => setItem(item))

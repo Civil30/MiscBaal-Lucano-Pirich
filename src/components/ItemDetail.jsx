@@ -3,7 +3,7 @@ import ItemCount from "./ItemCount"
 
 export default function ItemDetail ({ item }) {
 
-    const { id, stock, title, price, pictureUrl, detail } = item
+    const { id, stock, title, price, pictureUrl, description, features, details } = item
 
     return (
         <GridContainer>
@@ -17,7 +17,10 @@ export default function ItemDetail ({ item }) {
             </DataContainer>
             <DetailWrapper>
                 <h2>Detalles</h2>
-                <p>{detail}</p>
+                <p>{description}</p>
+                { features.map( feature => <li key={feature}>{feature}</li> ) }    
+                <h3>Más detalles</h3>
+                { details.map( detail => <li key={detail}>{detail}</li> ) }
                 <span>ID: {id}</span>
             </DetailWrapper>
         </GridContainer>

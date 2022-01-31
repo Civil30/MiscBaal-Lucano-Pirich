@@ -8,9 +8,11 @@ import { Link } from "react-router-dom"
 // }
 
 export const Card = styled(Link)`
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     max-width: 25rem;
-    min-height: 30rem;
+    height: 35rem;
     border: 1px solid rgba(0,0,0,0.1);
     padding: 0rem;
     margin: 2rem auto;
@@ -43,7 +45,9 @@ export const Img = styled.img`
 export const Title = styled.h3`
     font-size: 2rem;
     color: black;
+    margin: 0;
 `
 export const Price = styled.p`
     font-size: 15px;
+    margin: 0;
 `

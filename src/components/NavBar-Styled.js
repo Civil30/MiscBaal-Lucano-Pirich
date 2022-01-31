@@ -101,7 +101,8 @@ export const Menu = styled.ul `
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 2rem;
+        justify-content: flex-end;
+        max-width: 70%;
         padding: 1rem;
     }
 `;
