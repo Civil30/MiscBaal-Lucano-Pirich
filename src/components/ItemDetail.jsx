@@ -1,4 +1,4 @@
-import { GridContainer, Img, DataContainer, TitleWrapper, Title, DetailWrapper, Price, } from "./ItemDetail-Styled"
+import { GridContainer, Img, DataContainer, TitleWrapper, Title, DetailWrapper, Price, LiSmallSize, TitleH3, Ul, SpanId, } from "./ItemDetail-Styled"
 import ItemCount from "./ItemCount"
 
 export default function ItemDetail ({ item }) {
@@ -18,10 +18,14 @@ export default function ItemDetail ({ item }) {
             <DetailWrapper>
                 <h2>Detalles</h2>
                 <p>{description}</p>
-                { features.map( feature => <li key={feature}>{feature}</li> ) }    
-                <h3>Más detalles</h3>
-                { details.map( detail => <li key={detail}>{detail}</li> ) }
-                <span>ID: {id}</span>
+                <Ul> 
+                    { features.map( feature => <li key={feature}>{feature}</li> ) }
+                </Ul>   
+                <TitleH3>Más detalles</TitleH3>
+                <Ul> 
+                    { details.map( detail => <LiSmallSize key={detail}>{detail}</LiSmallSize> ) } 
+                </Ul>
+                <SpanId>ID: {id}</SpanId>
             </DetailWrapper>
         </GridContainer>
     )
