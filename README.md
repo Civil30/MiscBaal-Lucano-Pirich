@@ -8,7 +8,7 @@ Ecommerce creado con ReactJS.
 
 # Demostración
 
-<img src="https://giphy.com/embed/qw239GxqYhtWic3rzb" width="800px" />
+<img src="https://media.giphy.com/media/qw239GxqYhtWic3rzb/giphy.gif" width="800px" />
 
 # Instrucciones de uso
 
