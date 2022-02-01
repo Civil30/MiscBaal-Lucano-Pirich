@@ -13,13 +13,13 @@ export default function ItemListContainer () {
     
     useEffect(() => {
         getProducts.then( products => {
-            setLoading(false)
-            
             if (!category) return setProducts(products)
 
             const categoryFilter = products.filter( item => item.category === category)
             setProducts(categoryFilter)
-        })
+
+        }).finally( () => setLoading(false))
+
     },[category])
     
     
