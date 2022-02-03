@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const GridContainer = styled.section`
@@ -69,4 +70,18 @@ export const TitleH3 = styled.h3`
 export const SpanId = styled.span`
     color: #aaa;
     font-size: 15px;
+`
+export const BtnBuy = styled(Link)`
+    width: 100%;
+    color: #eee;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #00ADB5;
+    transition: background-color .3s ease-out;
+    display: ${( {showbtn} ) => showbtn ? "block" : "none"};
 `

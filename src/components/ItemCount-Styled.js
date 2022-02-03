@@ -75,30 +75,12 @@ export const AddCartBtn = styled.button`
     text-transform: uppercase;
     background-color: #00ADB5;
     transition: background-color .3s ease-out;
-    /* box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.1); */
-
-
+    
     :active {
         background-color: #222831;
     }
-`
-export const AddCartBtnDisabled = styled.button`
-    width: 100%;
-    cursor: pointer;
-    color: #eee;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    text-transform: uppercase;
-    background-color: red;
-    transition: background-color .3s ease-out;
-    /* box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.1); */
 
-
-    :active {
-        background-color: #222831;
-    }
+    /* @media (min-width: 478px) {
+        max-width: %;
+    } */
 `

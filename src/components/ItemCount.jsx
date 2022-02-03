@@ -12,21 +12,19 @@ export default function ItemCount ({ stock, initial, onAdd }) {
     }
 
     function decreaseQty () {
-        if (qty > 0) {
+        if (qty > 1) {
             setQty(qty - 1)
         }
     }
 
-    function addCart (e) {
-        if (stock === 0 || qty === 0) return ;
-        console.log("Agregado al carrito")
+    function addCart () {
+        onAdd(qty)
     }
 
     return (
         <ItemCountContainer>
             
-                
-                <ItemStock> Disponibles: {stock} </ItemStock>
+            <ItemStock> Disponibles: {stock} </ItemStock>
             
             <QtyAndCartContainer>
                 <QtyControlsContainer>
