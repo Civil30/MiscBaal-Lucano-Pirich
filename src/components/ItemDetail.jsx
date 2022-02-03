@@ -1,6 +1,6 @@
 import { GridContainer, Img, DataContainer, TitleWrapper, Title, DetailWrapper, Price, LiSmallSize, TitleH3, Ul, SpanId, BtnBuy, } from "./ItemDetail-Styled"
 import ItemCount from "./ItemCount"
-import { useState } from "react/cjs/react.development"
+import { useState } from "react"
 
 export default function ItemDetail ({ item }) {
 
