@@ -1,7 +1,7 @@
-import Item from "./Item";
+import { Item } from "./Item";
 import { WrapperCards } from "./ItemList-Styled";
 
-export default function ItemList ({ products }) {
+export function ItemList ({ products }) {
     
     return (
         <WrapperCards>

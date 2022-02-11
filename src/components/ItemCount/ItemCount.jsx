@@ -1,24 +1,17 @@
-import { useState } from "react"
 import { ItemCountContainer, ItemStock, Qty, QtyControlsBtn, QtyControlsContainer, QtyAndCartContainer, AddCartBtn } from "./ItemCount-Styled"
 
-export default function ItemCount ({ stock, initial, onAdd }) {
+export function ItemCount ({ stock, initial, onAdd, addCart }) {
     
-    const [qty, setQty] = useState (initial)
-
     function increaseQty () {
-        if (qty < stock) {
-            setQty(qty + 1)
+        if (initial < stock) {
+            onAdd(initial + 1)
         }
     }
 
     function decreaseQty () {
-        if (qty > 1) {
-            setQty(qty - 1)
+        if (initial > 1) {
+            onAdd(initial - 1)
         }
-    }
-
-    function addCart () {
-        onAdd(qty)
     }
 
     return (
@@ -29,7 +22,7 @@ export default function ItemCount ({ stock, initial, onAdd }) {
             <QtyAndCartContainer>
                 <QtyControlsContainer>
                     <QtyControlsBtn onClick={decreaseQty}> - </QtyControlsBtn>
-                    <Qty> {qty} </Qty>
+                    <Qty> {initial} </Qty>
                     <QtyControlsBtn onClick={increaseQty}> + </QtyControlsBtn>
                 </QtyControlsContainer>
                 <AddCartBtn onClick={addCart}> Agregar al carrito </AddCartBtn>

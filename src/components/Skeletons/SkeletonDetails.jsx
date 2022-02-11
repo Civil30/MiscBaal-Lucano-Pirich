@@ -1,7 +1,7 @@
-import Shimmer from "./Shimmer";
+import { Shimmer } from "./Shimmer";
 import { Count, DataContainer, TitleWrapper, GridContainer, Img, Price, Title } from "./SkeletonsElements";
 
-export default function SkeletonDetails () {
+export function SkeletonDetails () {
     return(
         <GridContainer>
             <Img />

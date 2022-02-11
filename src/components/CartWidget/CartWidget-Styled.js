@@ -10,4 +10,10 @@ export const CartIcon = styled.div `
         color: #EEE;
         font-size: 2.5rem;
     }
+
+    span {
+        color: white;
+        background-color: red;
+        padding: 2px;
+    }
 `
