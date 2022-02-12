@@ -6,12 +6,19 @@ export function CartProvider ({ children }) {
     
     const [items, setItems] = useState([])
     
-    function addItem (item, qty) {
+    function addItem (item) {
         if (isInCart(item.id)) {
-            return
+            items.map( lala => {
+                if(lala.id === item.id) {
+                    lala.qty += item.qty
+                }
+            })
+
+        } else {
+
+            setItems([...items, item])
         }
 
-        setItems([...items, item])
     }
 
     function removeItem (itemId) {
