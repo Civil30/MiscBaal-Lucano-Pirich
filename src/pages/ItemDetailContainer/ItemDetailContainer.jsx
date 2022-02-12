@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container } from "./ItemDetailContainer-Styled";
-import { getItem } from "../services/fetch";
-import SkeletonDetails from "./Skeletons/SkeletonDetails";
-import ItemDetail from "./ItemDetail";
+import { Container } from "pages/ItemDetailContainer/ItemDetailContainer-Styled";
+import { getItem } from "services/fetch";
+import { SkeletonDetails } from "components/Skeletons/SkeletonDetails";
+import { ItemDetail } from "components/ItemDetail/ItemDetail";
 
-export default function ItemDetailContainer () {
+export function ItemDetailContainer () {
     
     const [loading, setLoading] = useState(true)
     const [item, setItem] = useState([])

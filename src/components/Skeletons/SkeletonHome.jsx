@@ -1,8 +1,8 @@
 import { Card } from "./SkeletonsElements";
-import { WrapperCards } from "../ItemList-Styled"
-import Shimmer from "./Shimmer";
+import { WrapperCards } from "components/ItemList/ItemList-Styled"
+import { Shimmer } from "components/Skeletons/Shimmer";
 
-export default function SkeletonHome () {
+export function SkeletonHome () {
     return (
         <WrapperCards>
             <Card />

@@ -1,11 +1,11 @@
 import { Container, Wrapper, MobileIcon, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Styled'
-import CartWidget from './CartWidget';
+import { CartWidget } from '../CartWidget/CartWidget';
 import { RiStarSmileLine } from "react-icons/ri";
 import { VscMenu } from "react-icons/vsc";
 import { useState } from 'react';
 
 
-export default function NavBar () {
+export function NavBar () {
     const [mobileMenu, setMobileMenu] = useState(false)
 
     function showMenu () {

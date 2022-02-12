@@ -1,6 +1,6 @@
 import { Card, Img, Title, Id, Price } from "./Item-Styled"
 
-export default function Item ({ item }) {
+export function Item ({ item }) {
 
     const { id, title, price, pictureUrl } = item
 

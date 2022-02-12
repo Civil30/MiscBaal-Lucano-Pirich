@@ -24,6 +24,6 @@ export const CartIcon = styled.div `
         font-size: 12px;
         border-radius: 3px;
         font-weight: 600;
-        padding: 1px 2px;
+        padding: 1px 4px;
     }   
 `

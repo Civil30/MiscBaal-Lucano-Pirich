@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import ItemList from './ItemList'
-import { getProducts } from '../services/fetch'
-import SkeletonHome from './Skeletons/SkeletonHome'
+import { ItemList } from 'components/ItemList/ItemList'
+import { getProducts } from 'services/fetch'
+import { SkeletonHome } from 'components/Skeletons/SkeletonHome'
 import { useParams } from 'react-router-dom'
 
 
-export default function ItemListContainer () {
+export function ItemListContainer () {
     
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
