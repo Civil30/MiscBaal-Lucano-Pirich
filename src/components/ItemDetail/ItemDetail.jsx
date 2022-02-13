@@ -13,12 +13,11 @@ export function ItemDetail ({ item }) {
     const { items, addItem } = useCartContext()
 
     function addCart () {
-        addItem({ title, qty, id })
+        addItem({title, qty, id, price})
         setBtn(true)
-        console.log(items)
     }
 
-
+    console.log(items)
     return (
         <GridContainer>
             <Img src={pictureUrl} alt="poke-img" />

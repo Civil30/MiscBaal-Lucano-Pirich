@@ -5,11 +5,12 @@ import { useCartContext } from "../../hook/useCartContext";
 
 export function CartWidget () {
 
-    const { items } = useCartContext()
+    const { items, totalQty } = useCartContext()
+
     return(
-        <CartIcon>
+        <CartIcon to={"/cart"}>
             <FiShoppingCart />
-            <span>{items.length}</span>
+            { items.length < 1 ? "" : <span>{totalQty()}</span> }
         </CartIcon>
     )
 }

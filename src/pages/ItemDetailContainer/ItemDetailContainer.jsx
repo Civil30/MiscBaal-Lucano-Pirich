@@ -16,7 +16,7 @@ export function ItemDetailContainer () {
         
         setTimeout(() => {
            setLoading(false) 
-        }, 2000);
+        }, 0);
         
     },[id])
 
