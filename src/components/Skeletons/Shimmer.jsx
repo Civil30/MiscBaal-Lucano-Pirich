@@ -1,4 +1,4 @@
-import { Shimmers, ShimmerWrapper } from "./SkeletonsElements";
+import { Shimmers, ShimmerWrapper } from "components/Skeletons/SkeletonsElements";
 
 export function Shimmer () {
     return (

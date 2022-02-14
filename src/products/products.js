@@ -1,11 +1,11 @@
-import squirtle_original from "../assets/img/squirtle/squirtle_original.jpg"
-import bulbasaur_original from "../assets/img/bulbasaur/bulbasaur_original.jpg"
-import charmander_original from "../assets/img/charmander/charmander_original.jpg"
-import eevee_original from "../assets/img/eevee/eevee_original.jpg"
-import wooloo_original from "../assets/img/wooloo/wooloo_original.jpg"
-import froakie_original from "../assets/img/froakie/froakie_original.jpg"
-import maractus_original from "../assets/img/maractus/maractus_original.jpg"
-import gengar_original from "../assets/img/gengar/gengar_original.jpg"
+import squirtle_original from "assets/img/squirtle/squirtle_original.jpg"
+import bulbasaur_original from "assets/img/bulbasaur/bulbasaur_original.jpg"
+import charmander_original from "assets/img/charmander/charmander_original.jpg"
+import eevee_original from "assets/img/eevee/eevee_original.jpg"
+import wooloo_original from "assets/img/wooloo/wooloo_original.jpg"
+import froakie_original from "assets/img/froakie/froakie_original.jpg"
+import maractus_original from "assets/img/maractus/maractus_original.jpg"
+import gengar_original from "assets/img/gengar/gengar_original.jpg"
 
 
 export const products = [

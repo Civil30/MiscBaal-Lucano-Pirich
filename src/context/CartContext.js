@@ -4,7 +4,7 @@ export const CartContext = createContext()
 
 export function CartProvider ({ children }) {
     
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState([])    
 
     function addItem (item) {
         const { qty, id } = item
@@ -14,8 +14,10 @@ export function CartProvider ({ children }) {
         }
         
         items.forEach( item => {
-            if (item.id === id) {
-                item.qty += qty
+            const limitQty = Math.min(item.qty + qty, item.stock)
+            
+            if (item.id === id ) {
+                item.qty = limitQty
             }
         })
         setItems([...items])
@@ -43,7 +45,7 @@ export function CartProvider ({ children }) {
 
     function totalPrice () {
         let res = 0
-        items.forEach ( item => res += item.qty * item.price)
+        items.forEach( item => res += item.qty * item.price)
         return res
     }
 

@@ -1,4 +1,4 @@
-import { Card } from "./SkeletonsElements";
+import { Card } from "components/Skeletons/SkeletonsElements";
 import { WrapperCards } from "components/ItemList/ItemList-Styled"
 import { Shimmer } from "components/Skeletons/Shimmer";
 

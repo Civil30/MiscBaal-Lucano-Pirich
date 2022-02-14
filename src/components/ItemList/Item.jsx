@@ -1,4 +1,4 @@
-import { Card, Img, Title, Id, Price } from "./Item-Styled"
+import { Card, Img, Title, Id, Price } from "components/ItemList/Item-Styled"
 
 export function Item ({ item }) {
 

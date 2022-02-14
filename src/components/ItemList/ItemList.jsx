@@ -1,5 +1,5 @@
-import { Item } from "./Item";
-import { WrapperCards } from "./ItemList-Styled";
+import { Item } from "components/ItemList/Item";
+import { WrapperCards } from "components/ItemList/ItemList-Styled";
 
 export function ItemList ({ products }) {
     

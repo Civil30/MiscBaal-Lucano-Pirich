@@ -1,4 +1,4 @@
-import { Container, Wrapper, MobileIcon, LogoContainer, Menu, MenuItems, MenuItemsLinks } from './NavBar-Styled'
+import { Container, Wrapper, MobileIcon, LogoContainer, Menu, MenuItems, MenuItemsLinks } from 'components/NavBar/NavBar-Styled'
 import { CartWidget } from 'components/NavBar/CartWidget';
 import { RiStarSmileLine } from "react-icons/ri";
 import { VscMenu } from "react-icons/vsc";

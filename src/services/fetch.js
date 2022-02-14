@@ -1,4 +1,4 @@
-import { products } from "../products/products"
+import { products } from "products/products"
 
 export const getProducts = new Promise((resolve, reject) => {
     setTimeout(() => {

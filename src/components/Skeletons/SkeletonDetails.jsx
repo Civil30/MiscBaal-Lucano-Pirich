@@ -1,5 +1,5 @@
-import { Shimmer } from "./Shimmer";
-import { Count, DataContainer, TitleWrapper, GridContainer, Img, Price, Title } from "./SkeletonsElements";
+import { Shimmer } from "components/Skeletons/Shimmer";
+import { Count, DataContainer, TitleWrapper, GridContainer, Img, Price, Title } from "components/Skeletons/SkeletonsElements";
 
 export function SkeletonDetails () {
     return(

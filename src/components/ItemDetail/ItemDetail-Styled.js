@@ -83,6 +83,6 @@ export const BtnBuy = styled(Link)`
     text-transform: uppercase;
     background-color: #00ADB5;
     transition: all .5s ease-out;
-    opacity: ${( {showbtn} ) => showbtn ? "1" : "0"};
+    display: ${( {showbtn} ) => showbtn ? "block" : "none"};
     /* display: ${( {showbtn} ) => showbtn ? "block" : "none"}; */
 `

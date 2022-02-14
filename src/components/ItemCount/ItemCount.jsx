@@ -1,16 +1,16 @@
-import { ItemCountContainer, ItemStock, Qty, QtyControlsBtn, QtyControlsContainer, QtyAndCartContainer, AddCartBtn } from "./ItemCount-Styled"
+import { ItemCountContainer, ItemStock, Qty, QtyControlsBtn, QtyControlsContainer, QtyAndCartContainer, AddCartBtn } from "components/ItemCount/ItemCount-Styled"
 
-export function ItemCount ({ stock, initial, onAdd, addCart }) {
+export function ItemCount ({ stock, initial, setQty, addCart }) {
     
     function increaseQty () {
         if (initial < stock) {
-            onAdd(initial + 1)
+            setQty(initial + 1)
         }
     }
 
     function decreaseQty () {
         if (initial > 1) {
-            onAdd(initial - 1)
+            setQty(initial - 1)
         }
     }
 

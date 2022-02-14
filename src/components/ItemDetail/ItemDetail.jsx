@@ -1,4 +1,4 @@
-import { GridContainer, Img, DataContainer, TitleWrapper, Title, DetailWrapper, Price, LiSmallSize, TitleH3, Ul, SpanId, BtnBuy, } from "./ItemDetail-Styled"
+import { GridContainer, Img, DataContainer, TitleWrapper, Title, DetailWrapper, Price, LiSmallSize, TitleH3, Ul, SpanId, BtnBuy, } from "components/ItemDetail/ItemDetail-Styled"
 import { ItemCount } from "components/ItemCount/ItemCount"
 import { useState } from "react"
 import { useCartContext } from "hook/useCartContext"
@@ -13,11 +13,12 @@ export function ItemDetail ({ item }) {
     const { items, addItem } = useCartContext()
 
     function addCart () {
-        addItem({title, qty, id, price})
+        addItem({title, qty, id, price, stock})
         setBtn(true)
     }
-
+    
     console.log(items)
+    
     return (
         <GridContainer>
             <Img src={pictureUrl} alt="poke-img" />
@@ -26,7 +27,7 @@ export function ItemDetail ({ item }) {
                     <Title>{title}</Title>
                     <Price>$ {price}</Price>
                 </TitleWrapper>
-                <ItemCount stock={stock} initial={qty} onAdd={setQty} addCart={addCart} />
+                <ItemCount stock={stock} initial={qty} setQty={setQty} addCart={addCart} />
                 <BtnBuy showbtn={btn} to={"/cart"}>Ir al carrito</BtnBuy>   
             </DataContainer>
             <DetailWrapper>
