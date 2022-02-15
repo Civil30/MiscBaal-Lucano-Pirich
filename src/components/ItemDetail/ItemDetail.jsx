@@ -5,7 +5,7 @@ import { useCartContext } from "hook/useCartContext"
 
 export function ItemDetail ({ item }) {
 
-    const { id, stock, title, price, pictureUrl, description, features, details } = item
+    const { id, stock, title, price, pictureUrl, description, features = [], details = [] } = item
 
     const [ qty, setQty ] = useState(1)
     const [ btn, setBtn ] = useState(false)
@@ -13,7 +13,7 @@ export function ItemDetail ({ item }) {
     const { items, addItem } = useCartContext()
 
     function addCart () {
-        addItem({title, qty, id, price, stock})
+        addItem({ title, qty, id, price, stock })
         setBtn(true)
     }
     

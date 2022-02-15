@@ -1,12 +1,17 @@
-import { products } from "products/products"
+import { collection, getDocs, getDoc, doc } from "firebase/firestore"
+import { db } from 'services/firebase'
 
-export const getProducts = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(products)
-    }, 0)
-})
+export async function getProductsFromFirebase () {
+    const query = collection(db, "products")
+    const snapshot = await getDocs(query)
+    const res = snapshot.docs.map( product => {
+        return ({ ...product.data(), id: product.id }) 
+    })
+    return res
+}
 
-export const getItem = (id) => new Promise ((resolve, reject) => {
-    const filterId = products.find( items => items.id.toString() === id)
-    resolve(filterId)
-})
+export async function getItemFromFirebase (id) {
+    const docRef = doc(db, "products", id)
+    const docSnapshot = await getDoc(docRef)
+    return docSnapshot.data()
+}

@@ -1,23 +1,27 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "pages/ItemDetailContainer/ItemDetailContainer-Styled";
-import { getItem } from "services/fetch";
+import { getItemFromFirebase } from "services/fetch";
 import { SkeletonDetails } from "components/Skeletons/SkeletonDetails";
 import { ItemDetail } from "components/ItemDetail/ItemDetail";
 
+
 export function ItemDetailContainer () {
     
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [item, setItem] = useState([])
     const { id } = useParams()
-    
+
     useEffect(() => {
-        getItem(id).then( item => setItem(item))
-        
-        setTimeout(() => {
-           setLoading(false) 
-        }, 0);
-        
+        setLoading(true)
+        getItemFromFirebase(id)
+        .then( item => setItem({ ...item, id: id }))
+        .finally( () => 
+            setTimeout( () => {
+                setLoading(false)
+            }, 1000)
+        )
+
     },[id])
 
     return (
@@ -28,14 +32,3 @@ export function ItemDetailContainer () {
         </Container>
     )
 }
-
-
-// const getItem = new Promise((resolve, reject) => { 
-        //     resolve(products.find( item => {
-        //         return item.id.toString() === id
-        //     }))
-        //     setTimeout(() => {
-        //         setLoading(false)
-        //     }, 2000)
-        // })
-        // getItem.then(item => setItem(item))
