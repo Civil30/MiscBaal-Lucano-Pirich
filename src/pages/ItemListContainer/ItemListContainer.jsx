@@ -13,18 +13,14 @@ export function ItemListContainer () {
     
     useEffect(() => {
         setLoading(true)
-        getProductsFromFirebase().then( products => {
 
+        getProductsFromFirebase().then( products => {
             if (!category) return setProducts(products)
 
             const categoryFilter = products.filter( item => item.category === category)
             setProducts(categoryFilter)
 
-        }).finally( () => 
-            setTimeout(() => { 
-                setLoading(false)
-            }, 1000)
-        ) 
+        }).finally( () => setLoading(false)) 
 
     },[category])
     

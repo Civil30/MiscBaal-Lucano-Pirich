@@ -14,15 +14,13 @@ export function ItemDetailContainer () {
 
     useEffect(() => {
         setLoading(true)
-        getItemFromFirebase(id)
-        .then( item => setItem({ ...item, id: id }))
-        .finally( () => 
-            setTimeout( () => {
-                setLoading(false)
-            }, 1000)
-        )
 
+        getItemFromFirebase(id).then( item => {
+            setItem({...item, id: id})
+        }).finally( () => setLoading(false))
+    
     },[id])
+    
 
     return (
         <Container>
