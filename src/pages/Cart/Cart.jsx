@@ -1,4 +1,4 @@
-import { addDoc, collection, Timestamp, writeBatch, doc, getDocs, query, documentId, where } from "firebase/firestore"
+import { addDoc, collection, Timestamp, writeBatch, getDocs, query, documentId, where } from "firebase/firestore"
 import { useState } from "react"
 import { useCartContext } from "hook/useCartContext"
 import { Link } from "react-router-dom"
