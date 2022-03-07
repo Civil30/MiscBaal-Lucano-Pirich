@@ -15,6 +15,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input, button {
+  font-family: 'Rubik';
+}
+
 h1, h2, h3{
   font-weight: 600;
 }

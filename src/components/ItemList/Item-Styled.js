@@ -1,21 +1,16 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-// colores {
-//     gris oscuro: #222831
-//     gris claro: #393E46
-//     celeste: #00ADB5
-//     blanca: #eee
-// }
+
 
 export const Card = styled(Link)`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    max-width: 25rem;
-    height: 35rem;
+    justify-content: space-evenly;
+    max-width: 95%;
+    height: 45rem;
     border: 1px solid rgba(0,0,0,0.1);
-    padding: 0rem;
     margin: 2rem auto;
+    padding: 5px;
     text-decoration: none;
     color: #393E46;
     border-radius: 5px;
@@ -29,11 +24,8 @@ export const Card = styled(Link)`
     }
 `
 
-export const Id = styled.span`
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 12px;
+export const ImgContainer = styled.div`
+    max-width: 35rem;
 `
 
 export const Img = styled.img`
@@ -47,6 +39,7 @@ export const Title = styled.h3`
     color: black;
     margin: 0;
 `
+
 export const Price = styled.p`
     font-size: 15px;
     margin: 0;

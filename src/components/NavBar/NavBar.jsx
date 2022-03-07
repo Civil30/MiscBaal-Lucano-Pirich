@@ -12,8 +12,12 @@ export function NavBar () {
         setMobileMenu(!mobileMenu)
     }
 
+    function closeMenu () {
+        setMobileMenu(false)
+    }
+
     return (
-        <Container>
+        <Container onClick={ mobileMenu ? closeMenu : null }>
             <Wrapper>
                 <MobileIcon onClick={showMenu}>
                     <VscMenu />
@@ -37,11 +41,6 @@ export function NavBar () {
                     <MenuItems>
                         <MenuItemsLinks to='/category/figuras'>
                             Figuras
-                        </MenuItemsLinks>
-                    </MenuItems>
-                    <MenuItems>
-                        <MenuItemsLinks to='/about'>
-                            Nosotros
                         </MenuItemsLinks>
                     </MenuItems>
                 </Menu>

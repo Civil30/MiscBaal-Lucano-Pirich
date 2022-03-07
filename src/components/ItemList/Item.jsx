@@ -1,4 +1,4 @@
-import { Card, Img, Title, Id, Price } from "components/ItemList/Item-Styled"
+import { Card, Img, Title, Price, ImgContainer } from "components/ItemList/Item-Styled"
 
 export function Item ({ item }) {
 
@@ -6,9 +6,10 @@ export function Item ({ item }) {
 
     return(
         <Card to={`/item/${id}`}>
-            <Img src={pictureUrl} />
+            <ImgContainer>
+                <Img src={pictureUrl} />
+            </ImgContainer>
             <Title>{title}</Title>
-            <Id>ID: {id}</Id>
             <Price>$ {price}</Price>
         </Card>
     )

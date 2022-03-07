@@ -11,6 +11,8 @@ export function SkeletonHome () {
             <Card />
             <Card />
             <Card />
+            <Card />
+            <Card />
             <Shimmer />
         </WrapperCards>
     )

@@ -3,9 +3,9 @@ import styled, { keyframes } from "styled-components";
 
 export const Card = styled.div`
     display: block;
-    max-width: 25rem;
+    max-width: 28.5rem;
     width: 100%;
-    height: 35rem;
+    height: 45rem;
     padding: 0rem;
     margin: 2rem auto;
     background-color: #eee;
@@ -24,11 +24,20 @@ export const Img = styled.div`
     }
 `
 
+export const TitleWrapper = styled.div`
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+`
+
 export const Title = styled.div`
+    width: 100%;
     height: 30px;
     background-color: #ddd;
     border-radius: 5px;
-
 `
 
 export const Price = styled.div`
@@ -65,13 +74,15 @@ export const DataContainer = styled.div`
     justify-content: space-between;
     gap: 1rem;
     background-color: #eee;
+    gap: 4rem;
 `
 
-export const TitleWrapper = styled.div`
+export const Details = styled.div`
     display: flex;
-    gap: 5rem;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 0 auto;
+    padding: 3rem;
+    gap: 1rem;
 `
 
 /* animation skeleton */

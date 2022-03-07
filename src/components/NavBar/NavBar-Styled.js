@@ -5,8 +5,10 @@ export const Container = styled.div `
     width: 100%;
     background-color: #222831;
     height: 6rem;
-    /* padding-top: 1px;   */
-`;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+`
 
 export const Wrapper = styled.nav `
     width: 90%;
@@ -15,12 +17,7 @@ export const Wrapper = styled.nav `
     justify-content: space-between;
     height: 100%;
     margin: auto;    
-    
-    
-    @media (min-width: 478px)  {
-    }
-
-`;
+`
 
 export const LogoContainer = styled(Link) `
     font-size: 2rem;
@@ -29,7 +26,6 @@ export const LogoContainer = styled(Link) `
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    /* padding-top: 1px; */
 
     svg {
         font-size: 4rem;
@@ -40,7 +36,6 @@ export const LogoContainer = styled(Link) `
     p {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        /* line-height: 1; */
         text-transform: uppercase;
         font-weight: bold;
         color: #FCBAD3;
@@ -53,7 +48,7 @@ export const LogoContainer = styled(Link) `
         grid-row: 1 / 2;
     }
 
-    @media (min-width: 478px)  {
+    @media (min-width: 576px)  {
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
         
@@ -65,13 +60,13 @@ export const LogoContainer = styled(Link) `
 
         p {
             grid-column: 2 / 3;    
-            /* line-height: 1; */
             text-transform: uppercase;
             font-weight: bold;
             padding: 5px;
             color: #FCBAD3;
             margin-top: 9px;
         }
+
         p:last-child {
             grid-column: 2 / 3;
             grid-row: 2 / 3;
@@ -79,24 +74,24 @@ export const LogoContainer = styled(Link) `
             margin-left: 1px;
         }
     }
-`;
+`
 
 export const Menu = styled.ul `
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 6rem;
     transition: left 0.2s ease;
     left: ${({ open }) => open ? "0" : "-100%"};
-    background-color: rgba(34,40,49,0.9);
+    background-color: rgba(34,40,49);
     width: 100%;
     z-index: 99;
     margin: 0;
     padding: 2rem;
     height: 100%;
     
-    @media (min-width: 478px) {
+    @media (min-width: 576px) {
         position: unset;
         display: flex;
         flex-direction: row;
@@ -105,12 +100,12 @@ export const Menu = styled.ul `
         max-width: 70%;
         padding: 1rem;
     }
-`;
+`
 
 export const MenuItems = styled.li `
     list-style: none;
-    font-size: 16px;
-`;
+    font-size: 20px;
+`
 
 export const MenuItemsLinks = styled(Link) `
     display: block;
@@ -118,7 +113,13 @@ export const MenuItemsLinks = styled(Link) `
     text-decoration: none;
     width: 100%;
     padding: 2rem;
-`;
+    border: 1px solid transparent;
+    transition: color .3s ease;
+
+    :hover {
+        color: #fcbad3;
+    }
+`
 
 export const MobileIcon = styled.div`
     display: flex;
@@ -131,8 +132,7 @@ export const MobileIcon = styled.div`
         cursor: pointer;
     }
     
-    @media (min-width: 478px)  {
+    @media (min-width: 576px)  {
         display: none;
     }
-
 `

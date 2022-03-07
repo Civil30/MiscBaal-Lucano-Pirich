@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+
 export const CartIcon = styled(Link)`
     display: flex;
     align-items: center;
@@ -15,7 +16,6 @@ export const CartIcon = styled(Link)`
 
     span {
         color: #fcbad3;
-        /* background-color: #ff0000eb; */
         position: absolute;
         display: flex;
         justify-content: center;
