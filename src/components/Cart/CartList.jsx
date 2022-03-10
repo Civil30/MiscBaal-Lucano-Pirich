@@ -11,11 +11,13 @@ export function CartList () {
             <ItemListContainer>
                 {
                     items.map( item => {
-                        const {title, id, qty, price, pictureUrl} = item
+                        const {title, id, qty, price, saveImg} = item
+                        console.log(item)
                         return (
                             <ItemListInCart key={id}>
                                 <ImgContainer>
-                                    <img src={pictureUrl} alt="item" />   
+                                    <img src={saveImg
+                                    } alt="item" />   
                                 </ImgContainer>
                                 <ItemInfo>
                                     <h3>{title}</h3>
