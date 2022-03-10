@@ -116,3 +116,33 @@ export const SpanId = styled.span`
     color: #aaa;
     font-size: 15px;
 `
+
+export const PicturesContainer = styled.div`
+    max-width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: 768px) {
+        flex-direction: column;
+    }
+`
+
+export const ImgWrapper = styled.div`
+    max-width: 80%;
+    margin: auto;
+`
+
+export const ListImgWrapper = styled.div`
+    display: flex;
+    max-width: 100%;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+`
+
+export const MiniImgWrapper = styled.div`
+    width: 100%;
+    cursor: pointer;
+`
